@@ -1,0 +1,83 @@
+{
+  "User": {
+    "username": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "bio": {
+      "type": "string"
+    },
+    "profilePicture": {
+      "type": "string"
+    },
+    "fitnessProfile": {
+      "gender": {
+        "type": "string",
+        "enum": ["male", "female", "other"]
+      },
+      "height": {
+        "type": "number",
+        "required": true
+      },
+      "weight": {
+        "type": "number",
+        "required": true
+      },
+      "fitnessLevel": {
+        "type": "string",
+        "enum": ["beginner", "intermediate", "advanced"]
+      },
+      "goals": {
+        "type": "array",
+        "items": {
+          "type": "ObjectId",
+          "ref": "Goal"
+        }
+      },
+      "maxPullups": {
+        "type": "number",
+        "default": 0
+      },
+      "maxPushups": {
+        "type": "number",
+        "default": 0
+      },
+      "maxSquats": {
+        "type": "number",
+        "default": 0
+      },
+      "maxDips": {
+        "type": "number",
+        "default": 0
+      }
+    }
+  },
+  "Goal": {
+    "name": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}
