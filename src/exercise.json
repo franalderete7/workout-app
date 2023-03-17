@@ -1,0 +1,34 @@
+{
+  "Exercise": {
+    "video": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "reps": {
+      "type": "string or number"
+    },
+    "rest": {
+      "type": "string or number"
+    },
+    "difficultyLevel": {
+      "type": "string",
+      "enum": ["beginner", "intermediate", "advanced"]
+    },
+    "muscleGroup": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "equipment": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
